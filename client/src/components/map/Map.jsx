@@ -2,23 +2,19 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import './map.scss'
 import "leaflet/dist/leaflet.css";
 import Pin from '../pin/Pin';
-import L from 'leaflet';
-import markerUrl from '/pin-map.png';
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({ iconUrl: markerUrl, shadowUrl: '/marker-shadow.png' });
 
 function Map({ items }) {
   return (
-    <MapContainer center={
-      items.length === 1
-        ? [items[0].latitude, items[0].longitude]
-        : [7.8731, 80.7718]
-    } zoom={items.length === 1
-      ? 11
-      : 8
-    }
+    <MapContainer 
+      center={
+        items.length === 1
+          ? [items[0].latitude, items[0].longitude]
+          : [7.8731, 80.7718]
+      } 
+      zoom={items.length === 1 ? 11 : 8}
       scrollWheelZoom={false}
-      className='map'>
+      className='map'
+    >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
