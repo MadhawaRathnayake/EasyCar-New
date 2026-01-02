@@ -9,7 +9,7 @@ import { Server } from "socket.io"
 const io = new Server({
     cors: {
         // remove trailing slash and restrict to the client origin
-        origin: "http://localhost:5173",
+        origin: "https://easycar-hair.onrender.com/",
         methods: ["GET", "POST"],
         credentials: true,
     },

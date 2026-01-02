@@ -5,8 +5,13 @@ import axios from "axios";
 //     withCredentials:true,
 // })
 
+// const apiRequest = axios.create({
+//     baseURL:"http://localhost:8800/api",
+//     withCredentials:true,
+// })
+
 const apiRequest = axios.create({
-    baseURL:"http://localhost:8800/api",
+    baseURL:"https://easycar-hair.onrender.com/api",
     withCredentials:true,
 })
 
