@@ -3,7 +3,7 @@ import './map.scss'
 import "leaflet/dist/leaflet.css";
 import Pin from '../pin/Pin';
 import L from 'leaflet';
-import markerUrl from '/pin.png';
+import markerUrl from '/pin-map.png';
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({ iconUrl: markerUrl, shadowUrl: '/marker-shadow.png' });
 
